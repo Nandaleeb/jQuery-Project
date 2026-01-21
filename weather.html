@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - Simple jQuery Website</title>
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-star"></i>
+                    <span>SimpleWeb</span>
+                </div>
+                
+                <!-- Mobile Hamburger Button -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="weather.html" class="nav-link active">Weather</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1 class="page-title">Weather Dashboard</h1>
+            
+            <!-- Weather Search -->
+            <div class="weather-search">
+                <h2>Search Weather</h2>
+                <form id="weather-form" class="search-form">
+                    <input type="text" id="city-input" placeholder="Enter city name..." required>
+                    <button type="submit"><i class="fas fa-search"></i> Search</button>
+                </form>
+            </div>
+            
+            <!-- Quick Cities -->
+            <div class="quick-cities">
+                <h3>Quick Search</h3>
+                <div class="cities-grid">
+                    <button class="city-button">New York</button>
+                    <button class="city-button">London</button>
+                    <button class="city-button">Tokyo</button>
+                    <button class="city-button">Sydney</button>
+                    <button class="city-button">Paris</button>
+                    <button class="city-button">Dubai</button>
+                </div>
+            </div>
+            
+            <!-- Loading Spinner -->
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Getting weather data...</p>
+            </div>
+            
+            <!-- Weather Widget -->
+            <div class="weather-widget">
+                <h2>Weather for <span id="city-name"></span></h2>
+                <div class="weather-info">
+                    <div class="weather-item">
+                        <i class="fas fa-thermometer-half"></i>
+                        <h3>Temperature</h3>
+                        <div class="temperature" id="temperature">--</div>
+                    </div>
+                    <div class="weather-item">
+                        <i class="fas fa-tint"></i>
+                        <h3>Humidity</h3>
+                        <div id="humidity">--</div>
+                    </div>
+                    <div class="weather-item">
+                        <i class="fas fa-wind"></i>
+                        <h3>Wind Speed</h3>
+                        <div id="wind-speed">--</div>
+                    </div>
+                    <div class="weather-item">
+                        <i class="fas fa-cloud-sun"></i>
+                        <h3>Condition</h3>
+                        <div id="condition">--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="weather.html">Weather</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info@simpleweb.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Lorem Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SimpleWeb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/weather.js"></script>
+   
+</body>
+</html>

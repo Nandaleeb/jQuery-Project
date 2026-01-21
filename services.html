@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Simple jQuery Website</title>
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-star"></i>
+                    <span>SimpleWeb</span>
+                </div>
+                
+                <!-- Mobile Hamburger Button -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="weather.html" class="nav-link">Weather</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1 class="page-title">Our Services</h1>
+            
+            <!-- Services Section -->
+            <section class="services-section">
+                <div class="services-grid">
+                    <div class="service-card" data-service="web">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    
+                    <div class="service-card" data-service="mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Apps</h3>
+                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    
+                    <div class="service-card" data-service="design">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+                    </div>
+                    
+                    <div class="service-card" data-service="seo">
+                        <i class="fas fa-search"></i>
+                        <h3>SEO Optimization</h3>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+                    </div>
+                    
+                    <div class="service-card" data-service="support">
+                        <i class="fas fa-headset"></i>
+                        <h3>Support & Maintenance</h3>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+                    </div>
+                    
+                    <div class="service-card" data-service="consulting">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Business Consulting</h3>
+                        <p>Et harum quidem rerum facilis est et expedita distinctio nam libero tempore.</p>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- Modal -->
+            <div id="serviceModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-title">Service Title</h2>
+                    <p id="modal-description">Service description will appear here.</p>
+                </div>
+            </div>
+        
+            
+            <!-- Interactive Service Rating Widget -->
+            <section class="rating-section">
+                <h2 class="section-title">Rate Our Services</h2>
+                <div class="rating-widget">
+                    <div class="service-rating">
+                        <h3>How would you rate our services?</h3>
+                        <div class="stars">
+                            <span class="star" data-rating="1">⭐</span>
+                            <span class="star" data-rating="2">⭐</span>
+                            <span class="star" data-rating="3">⭐</span>
+                            <span class="star" data-rating="4">⭐</span>
+                            <span class="star" data-rating="5">⭐</span>
+                        </div>
+                        <div class="rating-display">
+                            <span id="rating-value">0</span>/5 Stars
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Simple Progress Tracker Widget -->
+            <section class="progress-section">
+                <h2 class="section-title">Project Progress Demo</h2>
+                <div class="progress-widget">
+                    <div class="progress-item">
+                        <label>Web Development</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="85">
+                                <span class="progress-text">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <label>Mobile Apps</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="70">
+                                <span class="progress-text">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <label>UI/UX Design</label>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="95">
+                                <span class="progress-text">95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="update-progress" class="progress-btn">Update Progress</button>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="process-section">
+                <h2 class="section-title">Our Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Discovery</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Planning</h3>
+                        <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Development</h3>
+                        <p>Ut enim ad minim veniam quis nostrud exercitation.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Launch</h3>
+                        <p>Duis aute irure dolor in reprehenderit voluptate velit.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="weather.html">Weather</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info@simpleweb.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Lorem Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SimpleWeb. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/services.js"></script>
+   
+</body>
+</html>
